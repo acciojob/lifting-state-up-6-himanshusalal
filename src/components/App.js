@@ -5,7 +5,6 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      text: "Todo 1",
       completed: false,
     },
   ]);
