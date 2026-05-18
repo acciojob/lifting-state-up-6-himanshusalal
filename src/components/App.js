@@ -1,30 +1,21 @@
-import React, { useState } from "react";
-import TodoList from "./TodoList";
+import React from "react";
 
-function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      completed: false,
-    },
-  ]);
-
-  const handleComplete = (id) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id
-          ? { ...todo, completed: true }
-          : todo
-      )
-    );
-  };
-
+function TodoList({ todos, handleComplete }) {
   return (
-    <TodoList
-      todos={todos}
-      handleComplete={handleComplete}
-    />
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          {todo.text}
+
+          {!todo.completed && (
+            <button onClick={() => handleComplete(todo.id)}>
+              Complete
+            </button>
+          )}
+        </li>
+      ))}
+    </ul>
   );
 }
 
-export default App;
+export default TodoList;
