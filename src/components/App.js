@@ -22,8 +22,8 @@ function App() {
   return (
     <TodoList
       todos={todos}
-      handleComplete={handleComplete} 
-    /> 
+      handleComplete={handleComplete}
+    />
   );
 }
 
