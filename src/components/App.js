@@ -5,7 +5,7 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      text: "Learn React",
+      text: "Todo 1",
       completed: false,
     },
   ]);
@@ -21,12 +21,10 @@ function App() {
   };
 
   return (
-    <div>
-      <TodoList
-        todos={todos}
-        handleComplete={handleComplete}
-      />
-    </div>
+    <TodoList
+      todos={todos}
+      handleComplete={handleComplete}
+    />
   );
 }
 
