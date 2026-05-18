@@ -3,8 +3,11 @@ import TodoList from "./TodoList";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Learn React", completed: false },
-    { id: 2, text: "Practice JavaScript", completed: false },
+    {
+      id: 1,
+      text: "Learn React",
+      completed: false,
+    },
   ]);
 
   const handleComplete = (id) => {
@@ -19,8 +22,6 @@ function App() {
 
   return (
     <div>
-      <h1>Todo App</h1>
-
       <TodoList
         todos={todos}
         handleComplete={handleComplete}
